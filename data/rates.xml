@@ -1,0 +1,583 @@
+<?xml version="1.0"?>
+<rates>
+	<timestamp>2017-04-04T15:32:52+02:00</timestamp>
+	
+	<curr code="AFN" rate="16.7" name="Afghan afghani">
+		<loc>Afghanistan</loc>
+	</curr>
+	<curr code="ALL" rate="127.120003" name="Albanian lek">
+		<loc>Albania</loc>
+	</curr>
+	<curr code="AMD" rate="483.679993" name="Armenian dram">
+		<loc>Armenia</loc>
+	</curr>
+	<curr code="ANG" rate="1.777502" name="Netherlands Antillean guilder">
+		<loc>Curacao</loc>
+		<loc>Sint Maarten</loc>
+	</curr>
+	<curr code="AOA" rate="165.085999" name="Angolan kwanza">
+		<loc>Angola</loc>
+	</curr>
+	<curr code="ARS" rate="15.379022" name="Argentine peso">
+		<loc>Argentina</loc>
+	</curr>
+	<curr code="AUD" rate="1.322402" name="Australian dollar">
+		<loc>Australia</loc>
+		<loc>Christmas Island</loc>
+		<loc>Heard Island and McDonald Islands</loc>
+		<loc>Cocos Islands</loc>
+		<loc>Kiribati</loc>
+		<loc>Nauru</loc>
+		<loc>Norfolk Island</loc>
+		<loc>Tuvalu</loc>
+		<loc>Australian Antarctic Territory</loc>
+	</curr>
+	<curr code="AWG" rate="1.79" name="Aruban florin">
+		<loc>Aruba</loc>
+	</curr>
+	<curr code="AZN" rate="1.723901" name="Azerbaijani manat">
+		<loc>Azerbaijan</loc>
+	</curr>
+	<curr code="BAM" rate="1.838502" name="Bosnia and Herzegovina convertible mark">
+		<loc>Bosnia and Herzegovina</loc>
+	</curr>
+	<curr code="BBD" rate="2" name="Barbados dollar">
+		<loc>Barbados</loc>
+	</curr>
+	<curr code="BDT" rate="80.230003" name="Bangladeshi taka">
+		<loc>Bangladesh</loc>
+	</curr>
+	<curr code="BGN" rate="1.8346" name="Bulgarian lev">
+		<loc>Bulgaria</loc>
+	</curr>
+	<curr code="BHD" rate="0.377024" name="Bahraini dinar">
+		<loc>Bahrain</loc>
+	</curr>
+	<curr code="BIF" rate="1695.430054" name="Burundian dollar">
+		<loc>Burundi</loc>
+	</curr>
+	<curr code="BND" rate="1.399795" name="Brunei dollar">
+		<loc>Brunei</loc>
+		<loc>Singapore</loc>
+	</curr>
+	<curr code="BOB" rate="6.87956" name="Boliviano">
+		<loc>Bolivia</loc>
+	</curr>
+	<curr code="BRL" rate="3.1259" name="Brazilian real">
+		<loc>Brazil</loc>
+	</curr>
+	
+	<curr code="BTN" rate="64.999979" name="Bhutanese ngultrum">
+		<loc>Bhutan</loc>
+	</curr>
+	<curr code="BWP" rate="10.667401" name="Botswana pula">
+		<loc>Botswana</loc>
+	</curr>
+	<curr code="BYR" rate="20020" name="Belarusian ruble">
+		<loc>Belarus</loc>
+	</curr>
+	<curr code="BZD" rate="1.997701" name="Belize dollar">
+		<loc>Belize</loc>
+	</curr>
+	<curr code="CAD" rate="1.34422" name="Canadian dollar">
+		<loc>Canada</loc>
+	</curr>
+	<curr code="CDF" rate="1354.000155" name="Congolese franc">
+		<loc>Democratic Reupublic of the Congo</loc>
+	</curr>
+	<curr code="CHF" rate="1.00208" name="Swiss franc">
+		<loc>Switzerland</loc>
+		<loc>Liechtenstein</loc>
+	</curr>
+	<curr code="CLP" rate="661.099976" name="Chilean peso">
+		<loc>Chile</loc>
+	</curr>
+	<curr code="CLF" rate="0.02472" name="Unidad de Fomento">
+		<loc>Chile</loc>
+	</curr>
+	<curr code="CNY" rate="6.883098" name="Chinese yuan">
+		<loc>China</loc>
+	</curr>
+	<curr code="COP" rate="2876.699951" name="Colombian peso">
+		<loc>Colombia</loc>
+	</curr>
+	<curr code="CRC" rate="553.999904" name="Costa Rican colon">
+		<loc>Costa Rica</loc>
+	</curr>
+	<curr code="CUC" rate="1" name="Cuban convertible peso">
+		<loc>Cuba</loc>
+	</curr>
+	<curr code="CUP" rate="0.999688" name="Cuban peso">
+		<loc>Cuba</loc>
+	</curr>
+	<curr code="CVE" rate="103.498647" name="Cape Verde escudo">
+		<loc>Cape Verde</loc>
+	</curr>
+	<curr code="CZK" rate="25.358002" name="Czech koruna">
+		<loc>Czech Republic</loc>
+	</curr>
+	<curr code="DJF" rate="177.559998" name="Djuboutian franc">
+		<loc>Djibouti</loc>
+	</curr>
+	<curr code="DKK" rate="6.980403" name="Danish krone">
+		<loc>Denmark</loc>
+		<loc>Faroe Islands</loc>
+		<loc>Greenland</loc>
+	</curr>
+	<curr code="DOP" rate="46.959999" name="Dominican peso">
+		<loc>Dominican Republic</loc>
+	</curr>
+	<curr code="DZD" rate="109.869003" name="Algerian dinar">
+		<loc>Algeria</loc>
+	</curr>
+	<curr code="EGP" rate="18.101269" name="Egyption pound">
+		<loc>Egypt</loc>
+		<loc>Gaza Strip</loc>
+	</curr>
+	<curr code="ERN" rate="15.290035" name="Eritrean nakfa">
+		<loc>Eritrea</loc>
+	</curr>
+	<curr code="ETB" rate="22.762899" name="Ethiopian birr">
+		<loc>Ethiopia</loc>
+	</curr>
+	<curr code="EUR" rate="0.938299" name="EURO">
+		<loc>Akrotiri and Dhekelia</loc>
+		<loc>Andorra</loc>
+		<loc>Austria</loc>
+		<loc>Belgium</loc>
+		<loc>Cyprus</loc>
+		<loc>Estonia</loc>
+		<loc>Finland</loc>
+		<loc>France</loc>
+		<loc>Germany</loc>
+		<loc>Greece</loc>
+		<loc>Guadeloupe</loc>
+		<loc>Ireland</loc>
+		<loc>Italy</loc>
+		<loc>Kosovo</loc>
+		<loc>Latvia</loc>
+		<loc>Lithuania</loc>
+		<loc>Luxembourg</loc>
+		<loc>Malta</loc>
+		<loc>Martinique</loc>
+		<loc>Mayotte</loc>
+		<loc>Monaco</loc>
+		<loc>Montenegro</loc>
+		<loc>Netherlands</loc>
+		<loc>Portugal</loc>
+		<loc>Reunion</loc>
+		<loc>Saint Barthelemy</loc>
+		<loc>Saint Pierre and Miquelon</loc>
+		<loc>San Marino</loc>
+		<loc>Slovakia</loc>
+		<loc>Slovenia</loc>
+		<loc>Spain</loc>
+		<loc>Vatican City</loc>
+	</curr>
+	<curr code="FJD" rate="2.080389" name="Fiji dollar">
+		<loc>Fiji</loc>
+	</curr>
+	<curr code="FKP" rate="0.803702" name="Falkland Islands pound">
+		<loc>Falkland Islands</loc>
+	</curr>
+	<curr code="GBP" rate="0.803269" name="Pound sterling">
+		<loc>United Kingdom</loc>
+		<loc>Isle of Man</loc>
+		<loc>Jersey</loc>
+		<loc>Guernsey</loc>
+		<loc>South Georgia and the South Sandwich Islands</loc>
+		<loc>British Indian Ocean Territory</loc>
+		<loc>Tristan da Cunha</loc>
+		<loc>British Antarctic Territory</loc>
+	</curr>
+	<curr code="GEL" rate="2.425398" name="Georgian lari">
+		<loc>Georgia</loc>
+	</curr>
+	<curr code="GHS" rate="4.258497" name="Ghanaian cedi">
+		<loc>Ghana</loc>
+	</curr>
+	<curr code="GIP" rate="0.804038" name="Gibraltar pound">
+		<loc>Gibraltar</loc>
+	</curr>
+	<curr code="GMD" rate="44.000319" name="Gambian dalasi">
+		<loc>Gambia</loc>
+	</curr>
+	<curr code="GNF" rate="9186.999884" name="Guinean franc">
+		<loc>Guinea</loc>
+	</curr>
+	<curr code="GTQ" rate="7.338499" name="Guatemalan quetzal">
+		<loc>Guatemala</loc>
+	</curr>
+	<curr code="GYD" rate="204.509995" name="Guyanese dollar">
+		<loc>Guyana</loc>
+	</curr>
+	<curr code="HKD" rate="7.77035" name="Hong Kong dollar">
+		<loc>Hong Kong</loc>
+		<loc>Macao</loc>
+	</curr>
+	<curr code="HNL" rate="23.419774" name="Honduran lempira">
+		<loc>Honduras</loc>
+	</curr>
+	<curr code="HRK" rate="6.976197" name="Croatian kuna">
+		<loc>Croatia</loc>
+	</curr>
+	<curr code="HTG" rate="66.910004" name="Haitian gourde">
+		<loc>Haiti</loc>
+	</curr>
+	<curr code="HUF" rate="290.440002" name="Hungarian forint">
+		<loc>Hungary</loc>
+	</curr>
+	<curr code="IDR" rate="13327" name="Indonesian rupiah">
+		<loc>Indonesia</loc>
+	</curr>
+	<curr code="ILS" rate="3.647403" name="Israeli new shekel">
+		<loc>Israel</loc>
+		<loc>State of Palestine</loc>
+	</curr>
+	<curr code="INR" rate="65.029999" name="Indian rupee">
+		<loc>India</loc>
+		<loc>Bhutan</loc>
+		<loc>Nepal</loc>
+		<loc>Zimbabwe</loc>
+	</curr>
+	<curr code="IQD" rate="1181" name="Iraqi dinar">
+		<loc>Iraq</loc>
+	</curr>
+	<curr code="IRR" rate="32428.999933" name="Iranian rial">
+		<loc>Iran</loc>
+	</curr>
+	<curr code="ISK" rate="114.089996" name="Icelandic krona">
+		<loc>Iceland</loc>
+	</curr>
+	<curr code="JMD" rate="128.279999" name="Jamaican dollar">
+		<loc>Jamaica</loc>
+	</curr>
+	<curr code="JOD" rate="0.7075" name="Jordanian dinar">
+		<loc>Jordan</loc>
+		<loc>West Bank</loc>
+	</curr>
+	<curr code="JPY" rate="110.623001" name="Japanese yen">
+		<loc>Japan</loc>
+	</curr>
+	<curr code="KES" rate="103.050003" name="Kenyan shilling">
+		<loc>Kenya</loc>
+	</curr>
+	<curr code="KGS" rate="68.524002" name="Kyrgyzstani som">
+		<loc>Kyrgyzstan</loc>
+	</curr>
+	<curr code="KHR" rate="3960.899902" name="Cambodian riel">
+		<loc>Cambodia</loc>
+	</curr>
+	<curr code="KMF" rate="460.350006" name="Comoro franc">
+		<loc>Comoros</loc>
+	</curr>
+	<curr code="KPW" rate="900.000004" name="North Korean won">
+		<loc>North Korea</loc>
+	</curr>
+	<curr code="KRW" rate="1125.52002" name="South Korean won">
+		<loc>South Korea</loc>
+	</curr>
+	<curr code="KWD" rate="0.304698" name="Kuwaiti dinar">
+		<loc>Kuwait</loc>
+	</curr>
+	<curr code="KYD" rate="0.8196" name="Cayman Islands dollar">
+		<loc>Cayman Islands</loc>
+	</curr>
+	<curr code="KZT" rate="312.809998" name="Kazakhstani tenge">
+		<loc>Kazakhstan</loc>
+	</curr>
+	<curr code="LAK" rate="8191.000019" name="Lao kip">
+		<loc>Laos</loc>
+	</curr>
+	<curr code="LBP" rate="1505.506766" name="Labanese pound">
+		<loc>Lebanon</loc>
+	</curr>
+	<curr code="LKR" rate="151.649994" name="Sri Lankan rupee">
+		<loc>Sri Lanka</loc>
+	</curr>
+	<curr code="LRD" rate="91.999972" name="Liberian dollar">
+		<loc>Liberia</loc>
+	</curr>
+	<curr code="LSL" rate="13.740013" name="Lesotho loti">
+		<loc>Lesotho</loc>
+	</curr>
+	<curr code="LYD" rate="1.420099" name="Libyan dinar">
+		<loc>Libya</loc>
+	</curr>
+	<curr code="MAD" rate="10.049898" name="Moroccan dirham">
+		<loc>Morocco</loc>
+	</curr>
+	<curr code="MDL" rate="19.384979" name="Moldovan leu">
+		<loc>Moldova</loc>
+	</curr>
+	<curr code="MGA" rate="3200.000253" name="Malagasy ariary">
+		<loc>Madagascar</loc>
+	</curr>
+	<curr code="MKD" rate="57.470001" name="Macedonian denar">
+		<loc>Macedonia</loc>
+	</curr>
+	<curr code="MMK" rate="1348.99989" name="Myanmar kyat">
+		<loc>Myanmar</loc>
+	</curr>
+	<curr code="MNT" rate="2433.999806" name="Mongolian togrog">
+		<loc>Mongolia</loc>
+	</curr>
+	<curr code="MOP" rate="8.003101" name="Macanese pataca">
+		<loc>Macao</loc>
+	</curr>
+	<curr code="MRO" rate="356.999666" name="Mauritanian ouguiya">
+		<loc>Mauritania</loc>
+	</curr>
+	<curr code="MUR" rate="35.080002" name="Mauritian rupee">
+		<loc>Mauritius</loc>
+	</curr>
+	<curr code="MWK" rate="716.929993" name="Malawian kwacha">
+		<loc>Malawi</loc>
+	</curr>
+	<curr code="MXN" rate="18.879299" name="Mexican peso">
+		<loc>Mexico</loc>
+	</curr>
+	<curr code="MYR" rate="4.430124" name="Malaysian ringgit">
+		<loc>Malaysia</loc>
+	</curr>
+	<curr code="MZN" rate="70.440002" name="Mozambican metical">
+		<loc>Mozambique</loc>
+	</curr>
+	<curr code="NAD" rate="13.703976" name="Namibian dollar">
+		<loc>Namibia</loc>
+	</curr>
+	<curr code="NGN" rate="313.999802" name="Nigerian naira">
+		<loc>Nigeria</loc>
+	</curr>
+	<curr code="NIO" rate="29.69498" name="Nicaraguan cordoba">
+		<loc>Nicaraguan cordoba</loc>
+	</curr>
+	<curr code="NOK" rate="8.61254" name="Norwegian krone">
+		<loc>Norway</loc>
+		<loc>Svalbard</loc>
+		<loc>Jan Mayen</loc>
+		<loc>Bouvet Island</loc>
+		<loc>Queen Maud Land</loc>
+		<loc>Peter I Island</loc>
+	</curr>
+	<curr code="NPR" rate="103.750011" name="Nepalese rupee">
+		<loc>Nepal</loc>
+	</curr>
+	<curr code="NZD" rate="1.433026" name="New Zealand dollar">
+		<loc>New Zealand</loc>
+		<loc>Cook Islands</loc>
+		<loc>Niue</loc>
+		<loc>Pircairn Islands</loc>
+		<loc>Tokelau</loc>
+		<loc>Ross Dependency</loc>
+	</curr>
+	<curr code="OMR" rate="0.384802" name="Omani rial">
+		<loc>Oman</loc>
+	</curr>
+	<curr code="PAB" rate="1" name="Panamanian balboa">
+		<loc>Panama</loc>
+	</curr>
+	<curr code="PEN" rate="3.248498" name="Peruvian Sol">
+		<loc>Peru</loc>
+	</curr>
+	<curr code="PGK" rate="3.177205" name="Papua New Guinean kina">
+		<loc>Papua New Guinea</loc>
+	</curr>
+	<curr code="PHP" rate="50.209999" name="Philippine peso">
+		<loc>Phillippines</loc>
+	</curr>
+	<curr code="PKR" rate="104.650002" name="Pakistani rupee">
+		<loc>Pakistan</loc>
+	</curr>
+	<curr code="PLN" rate="3.992013" name="Polish zloty">
+		<loc>Poland</loc>
+	</curr>
+	<curr code="PYG" rate="5734.299805" name="Paraguayan guarani">
+		<loc>Paraguay</loc>
+	</curr>
+	<curr code="QAR" rate="3.640797" name="Qatari riyal">
+		<loc>Qatar</loc>
+	</curr>
+	<curr code="RON" rate="4.263102" name="Romanian leu">
+		<loc>Romania</loc>
+	</curr>
+	<curr code="RSD" rate="115.629601" name="Serbian dinar">
+		<loc>Serbia</loc>
+	</curr>
+	<curr code="RUB" rate="56.277302" name="Russian ruble">
+		<loc>Russia</loc>
+		<loc>Abkhazia</loc>
+		<loc>South Ossetia</loc>
+		<loc>Crimea</loc>
+	</curr>
+	<curr code="RWF" rate="818.130005" name="Rwandan franc">
+		<loc>Rwanda</loc>
+	</curr>
+	<curr code="SAR" rate="3.750087" name="Saudi riyal">
+		<loc>Saudi Arabia</loc>
+	</curr>
+	<curr code="SBD" rate="7.779601" name="Solomon Islands dollar">
+		<loc>Solomon Islands</loc>
+	</curr>
+	<curr code="SCR" rate="13.365051" name="Seychelles rupee">
+		<loc>Seychelles</loc>
+	</curr>
+	<curr code="SDG" rate="6.666958" name="Sudanese poud">
+		<loc>Sudan</loc>
+	</curr>
+	<curr code="SEK" rate="9.013151" name="Swedish krona">
+		<loc>Sweden</loc>
+	</curr>
+	<curr code="SGD" rate="1.40007" name="Singapore dollar">
+		<loc>Singapore</loc>
+		<loc>Brunei</loc>
+	</curr>
+	<curr code="SHP" rate="0.803994" name="Saint Helena pound">
+		<loc>Sain Helena</loc>
+		<loc>Ascension Island</loc>
+	</curr>
+	<curr code="SLL" rate="7449.999877" name="Sierra Leonean leone">
+		<loc>Sierra Leone</loc>
+	</curr>
+	<curr code="SOS" rate="546.999871" name="Somali shilling">
+		<loc>Somalia</loc>
+	</curr>
+	<curr code="SRD" rate="7.49049" name="Surinamese dollar">
+		<loc>Suriname</loc>
+	</curr>
+	<curr code="STD" rate="22996.099609" name="Sao Tome and Principe dobra">
+		<loc>Sao Tome and Principe</loc>
+	</curr>
+	<curr code="SYP" rate="514.97998" name="Syrian pound">
+		<loc>Syria</loc>
+	</curr>
+	<curr code="SZL" rate="13.650037" name="Swaza lilangeni">
+		<loc>Swaziland</loc>
+	</curr>
+	<curr code="THB" rate="34.480365" name="Thai baht">
+		<loc>Thailand</loc>
+		<loc>Cambodia</loc>
+		<loc>Myanmar</loc>
+		<loc>Laos</loc>
+	</curr>
+	<curr code="TJS" rate="8.308496" name="Tajikistani somoni">
+		<loc>Tajikistan</loc>
+	</curr>
+	<curr code="TMT" rate="3.41" name="Turkmenistani manat">
+		<loc>Turkmenistan</loc>
+	</curr>
+	<curr code="TND" rate="2.282203" name="Tunisian dinar">
+		<loc>Tunisia</loc>
+	</curr>
+	<curr code="TOP" rate="2.286905" name="Tongan pa'anga">
+		<loc>Tonga</loc>
+	</curr>
+	<curr code="TRY" rate="3.664698" name="Turkish lira">
+		<loc>Turkey</loc>
+		<loc>Northern Cyprus</loc>
+	</curr>
+	<curr code="TTD" rate="6.689497" name="Trinidad and Tobago dollar">
+		<loc>Trinidad and Tobago</loc>
+	</curr>
+	<curr code="TWD" rate="30.530001" name="New Taiwan dollar">
+		<loc>Taiwan</loc>
+	</curr>
+	<curr code="TZS" rate="2225.99994" name="Tanzanian shilling">
+		<loc>Tanzania</loc>
+	</curr>
+	<curr code="UAH" rate="27.110001" name="Ukranian hryvnia">
+		<loc>Ukraine</loc>
+	</curr>
+	<curr code="UGX" rate="3604.99994" name="Ugandan shilling">
+		<loc>Uganda</loc>
+	</curr>
+	<curr code="USD" rate="1" name="United States dollar">
+		<loc>United States</loc>
+		<loc>American Samoa</loc>
+		<loc>Barbados</loc>
+		<loc>Bermuda</loc>
+		<loc>British Indian Ocean Territory</loc>
+		<loc>British Vergin Islands</loc>
+		<loc>Caribbean Netherlands</loc>
+		<loc>Ecuador</loc>
+		<loc>El Salvador</loc>
+		<loc>Guam</loc>
+		<loc>Haiti</loc>
+		<loc>Marshall Islands</loc>
+		<loc>Federated States of Micronesia</loc>
+		<loc>Northern Mariana Islands</loc>
+		<loc>Palau</loc>
+		<loc>Panama</loc>
+		<loc>Puerto Rico</loc>
+		<loc>Timor-Leste</loc>
+		<loc>Turks and Caicos Islands</loc>
+		<loc>U.S. Virgin Islands</loc>
+		<loc>Zimbabwe</loc>
+	</curr>
+	<curr code="UYU" rate="28.479865" name="Uruguayan peso">
+		<loc>Uruguay</loc>
+	</curr>
+	<curr code="UZS" rate="3599.999983" name="Uzbekistan som">
+		<loc>Uzbekistan</loc>
+	</curr>
+	<curr code="VEF" rate="9.974498" name="Venezuelan bolivar">
+		<loc>Venezuela</loc>
+	</curr>
+	<curr code="VND" rate="22689" name="Vietnamese dong">
+		<loc>Vietnam</loc>
+	</curr>
+	<curr code="VUV" rate="106.750306" name="Vanuatu vatu">
+		<loc>Vanuatu</loc>
+	</curr>
+	<curr code="WST" rate="2.570802" name="Samoan tala">
+		<loc>Samoa</loc>
+	</curr>
+	<curr code="XAF" rate="615.210022" name="CFA franc BEAC">
+		<loc>Cameroon</loc>
+		<loc>Central African Republic</loc>
+		<loc>Republic of the Congo</loc>
+		<loc>Chad</loc>
+		<loc>Equatorial Guinea</loc>
+		<loc>Gabon</loc>
+	</curr>
+	<curr code="XAG" rate="0.05466" name="Silver">
+	</curr>
+	<curr code="XAU" rate="0.000796" name="Gold">
+	</curr>
+	<curr code="XCD" rate="2.699219" name="East Caribbean dollar">
+		<loc>Anguilla</loc>
+		<loc>Antigua and Barbuda</loc>
+		<loc>Dominica</loc>
+		<loc>Grenada</loc>
+		<loc>Montserrat</loc>
+		<loc>Saint Kitts and Nevas</loc>
+		<loc>Saint Lucia</loc>
+		<loc>Saint Vincent and the Grenadines</loc>
+	</curr>
+	<curr code="XDR" rate="0.737026" name="Special drawing rights">
+	</curr>
+	<curr code="XOF" rate="613.25055" name="CFA franc BCEAO">
+		<loc>Benin</loc>
+		<loc>Burkina</loc>
+		<loc>Cote d'Ivoire</loc>
+		<loc>Guinea-Bissau</loc>
+		<loc>Mali</loc>
+		<loc>Niger</loc>
+		<loc>Senegal</loc>
+		<loc>Togo</loc>
+	</curr>
+	<curr code="XPF" rate="111.419998" name="CFP franc">
+		<loc>French Polynesia</loc>
+		<loc>New Caledonia</loc>
+		<loc>Wallis and Futuna</loc>
+	</curr>
+	<curr code="YER" rate="249.949997" name="Yemeni rial">
+		<loc>Yemen</loc>
+	</curr>
+	<curr code="ZAR" rate="13.672803" name="South African rand">
+		<loc>South Africa</loc>
+	</curr>
+	<curr code="ZMW" rate="9.529975" name="Zambian kwacha">
+		<loc>Zambia</loc>
+	</curr>
+</rates>

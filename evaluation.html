@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SeaCurrent - Exchange Rate Converter</title>
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+	</head>
+	<body>
+		<header>
+			<div id="banner"></div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li> | 
+					<li><a href="./doc/">PhpDoc</a></li> | 
+					<li><a href="./data/rates.xml">XML File</a></li> | 
+					<li><a href="sources.html">Source Files</a></li> | 
+					<li><a href="evaluation.html">Critical Evaluation</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section id="content">
+
+<h1>REST vs SOAP and RPC based systems</h1>
+<p>During the creation of this API I have considered the design principles and constraints of Representational State Transfer (REST). Whilst REST may not be perfect, it has many benefits over alternative methods. The most commonly used alternative to REST is SOAP (a predecessor of XML-RPC), used to create RPC-based systems.</p>
+
+<p>One of the main factors that drove this decision is the nature of REST and SOAP. REST focuses on managing resources and data through CRUD operations, achieved through a single and consistent interface (most commonly HTTP). SOAP, however, is focused on operations (application logic) and can be used across a variety of underlying protocols. It is the single interface that makes REST much simpler than SOAP which, as mentioned, can use a number of underlying protocols such as SMTP, FTP as well as HTTP to perform its operations. Not only is REST simpler, it is lightweight in comparison to SOAP. REST rides directly on HTTP meaning that HTTP is all that is needed to send data/request and get the required response through the use of URIs. SOAP messages, however, require additional information detailing how the message should be processed using RPC methods.  As a result, SOAP messages are not human-readable whereas REST resource representations can be in different formats, such as JSON and XML, and are both human and machine readable. </p>
+
+<p>As the client in this project uses JavaScript and AJAX, it made sense to use a REST based service to accompany it. Although it is possible to call SOAP from JavaScript and AJAX, it is much easier to call a REST service due to its HTTP interface. REST uses nouns as resources and verbs as methods. The verbs are usually HTTP methods such as GET, POST, UPDATE, PUT and DELETE which are easily sent using AJAX and JavaScript through the built in HTTP Request method (this can be seen in <a href="js/app.js">app.js</a>). SOAP uses nouns and verbs, such as getUser, to make data available as services. Because this is not built into the HTTP Request it is much more difficult to implement and in general means that SOAP requires more learning that REST. </p>
+
+<p>Another factor is performance. REST is much faster than SOAP. REST is less CPU intensive and uses less bandwidth; REST is the best option because it can work well even on a limited bandwidth. </p> 
+
+<p>REST is not always ideal. Although REST only works over HTTP making it simple, this can also be seen as a disadvantage too because it limits REST to a certain type of application.
+SOAP has a service contract, unless this is implemented into REST anything goes. If a strict contract is needed between the client and server, REST may not be the best approach. In addition, security and authentication is much harder to enforce over REST in comparison to SOAP. </p>
+
+<p>REST is now much more popular among web developers than SOAP meaning there is more support and more APIs that can be used and/or implemented, further enforcing the idea of the open web. An example of this can be seen in my project where I have used another RESTful API to update the rates within my application. </p>
+
+<p>Critical Evaluation</p>
+
+<p>Before starting the coding of the project I decided to build the <a href="./data/rates.xml">XML file</a> that would drive the application. The reason I did this first was because I knew much of the code would have to be built around the elements within the document. The rates XML file contains a root element (rates) which is followed by a timestamp element of which its value is in a DateTime format. The timestamp element stores the last time the rates were updated so that the program knows when to update the rates. The rest of the file is then populated with currency elements which contain 3 required attributes:
+<ul>
+<li>Code – A unique 3-character identifier.</li>
+<li>Name – The name of the currency.</li>
+<li>Rate – The rate of conversion for that currency.</li>
+</ul>
+</p>
+
+<p>The currency elements have zero-to-many children location elements. Originally this was one-to-many but, after further research, I found that some of the ISO 4217 currencies were not bound to a location therefore I made the decision to make location child elements optional. </p>
+
+<p>To ensure that the elements within the XML file are valid, the XML file is validated against an <a href="./data/rates.xsd">XSD schema</a>. The schema checks that exactly one timestamp element is present within the document and validates the value of the element to make sure it is in the correct format. It’s important to get this right because if the timestamp element is not present then the program will have no way of knowing when the rates needed to be updated. The schema also validates the currency elements by checking that all of the attributes are present and their values are valid. This is done by setting the attribute fields to required. Because the code attribute is a unique identifier, an XSD unique restriction is used against that particular attribute. This stops multiple elements of the same code being put into the XML. There is also validation for location elements and their value. </p>
+
+<p>Element values are validated through custom simple types, restrictions and, where necessary, patterns. Patterns are similar to regex but follow a different syntax to that of PHP’s regex. This proved to be a challenge later on in the development stage because it is difficult to match the XSD regex with the corresponding PHP regex, which means that the name restriction allows different items to pass as valid depending on whether it is being hardcoded into the XML file or uploaded via the API. Tighter restrictions are enforced on the PHP regex than on the XSD to overcome this (so that the program only allows the true valid values to be put onto the XML file). While the XSD file still allows only valid character at the same length, it still passes “invalid” values such as “-.’” because all the characters are valid. I am please with the restrictions in place but a more fitting restriction reflecting that of the PHP regex could be one area that needs to be improved. </p>
+
+<p>After the XML and XSD files were set up, I decided to write the script for the automatic updating of the rates. The first challenge was to find a suitable API that regularly updates exchange rates. I found one called fixer.io but this proved to be an issue later on when I realized that they did not provide rates for as many ISO 4217 currencies as I wanted. I then discovered, signed up and used the RESTful web server <a href="https://currencylayer.com/">currency layer</a> which has everything I want. The only downside is that the free version only allows for 1000 calls to the API per month. Whilst this is fine for a small scale project, for a bigger project it may not be and it would be worth either paying for a premium version or finding a different if paying is not an option.
+Using the DOMXPath and the standard PHP library the script checks to see if the DateTime value of the timestamp element and the current time have a 12 hour gap or more. If this is the case, the script will use the currencylayer API, loop through each element within the rates XML and update the rates. Since the API responds in JSON, it is easy to decode and use the values. Once updated, the timestamp is also updated. </p>
+
+<p>At this point I thought it would be best to make my code adhere to good practices, and promote re-use by using object oriented PHP. Since the rates XML file is used throughout the project I created a <a href="./sources/server/class.XMLFileLoader.inc.phps">loader class</a> to handle the creation of an XML file. Within this abstract class the instantiation of the DOMDocument and DOMXPath is handled through the constructor and contains a validation abstract function which all sub-classes must implement. The sub-class which currently accompanies the file loader is the <a href="./sources/server/class.RatesXMLFileHandler.inc.phps">rates XML file handler class</a>. This class specifically manages the Rates.xml file and contains common functions and methods that are used throughout the project. If the project were to be extended and additional XML files were to be used, they can also be handled via a sub-class of XML file loader so that common code (such as the DOM and XPath instantiation, and validation) will not have to be written again. This also creates uniformed coding across the project. </p>
+
+<p>Next I started to build the GET method. I made sure I stuck to the object oriented principles and considered what code could also be re-used for the other methods. On the API “homepage” (<a href="./sources/server/conv.phps">conv.php</a>) I made this the “initiate” page. When a user requests something from the API it starts her. The code first checks what method is being called and stores it in a variable called method. Then all the required classes are instantiated and is followed by the update script. Using the method and a switch statement the code checks what request is being made and acts accordingly. </p>
+
+<p>I decided to handle all requests by using a < href=”./sources/class.Request.inc.phps”>request class</a>. All valid methods are passed to this object with the request name as a parameter value. The request object stores the name of the request, the time the request was made and the instance of the request object (because only one object can me made at a time I decided to use the singleton pattern). The class also contains a process method. The process method redirects the method to another PHP file which is used to handle that particular request. For example, if the GET method is passed through, the code will require for <a href="./sources/server/conv_get.phps">conv_get.php</a>. This saves on lots of code and require methods as it only needed to be written once. It also makes the code more readable to others. I am really happy with how this has turned out because it made the coding much less confusing and gave the project a structure. </p>
+
+<p>Once redirected to the conv_ file the request can start to be processed. I created a <a href="./sources/server/class.MethodObject.inc.phps">method object abstract class</a> which contains common functions and methods for the HTTP method requests. It also includes an abstract function for validation. The reason this was implements was so that when a request is made, an object containing all the details of that request is created. The object is only created if it passes validation. This gives full flexibility on working with the request and because each method object is built as a sub-class of the same abstract class there is uniform coding across the objects and common code is able to be reused. For the GET method request, this can be seen in <a href="./sources/server/class.GetObject.inc.phps">GetObject.php</a>.</p>
+
+<p>Whilst creating the method object class I realized I needed to create a class to handle responses. At this point there was no way to handle output. Because I had already retrieved the format values and validated them I decided to build a <a href="./sources/server/class.Format.inc.phps">format class</a>. This was made prior to the response object because the response object relies on the format class to send the right template. The format class simply contains getters and setters for the format type and some validation logic. At the bottom of the file, outside of the class, the format is instantiated immediately. This is so that early errors encountered can be sent in the correct format. Because of the way this class has been constructed, new formats can be implemented within the configuration file. This is the same for response messages too making it very easy to add new responses, templates and formats without any modifications to the code. </p>
+
+<p>The <a href="./sources/server/class.Response.inc.phps">response class</a> contains the message of the response. This is set through the constructor. The toString method is overwritten to find the constant containing the correct header and return the message. This is accompanied by a <a href="./sources/server/class.ResponseFactory.inc.phps">response factory</a> class which is used statically. Currently there is only a send function within it which echo’s the request objects toString. I used a factory class so that it can be easily extended. </p>
+
+<p>I created an <a href="./sources/server/class.APIException.inc.phps">API exception class</a> which extends the PHP Exception class. When an API Exception message is thrown the message is formatted in the correct format then sent to the send function within the response factory. I have created a custom templating engine that calls message templates from constants and replaces specific values that are within curly braces. For example, {{request}} will be replaced with the request name. This encourages code reuse and means that there are no duplicate messages and message formats can be easily manipulated in the configuration file. I have used this idea during Actions which is explained later on. The API exception handler is thrown when a validation error occurs or if there is an error in service. I then implemented this throughout the code. </p>
+
+<p>With all this in place, I then created the <a href="./sources/server/class.Conversion.inc.phps">conversion action</a> to handle the GET method action. This is a subclass of the <a href="./sources/server/class.Action.inc.phps">action abstract class</a> which stores two required functions: process and getMessage. The process function is where all the processing logic should go for that action. The getMessage function is where the message is built to be sent to the response factory. This creates uniform coding across all actions and groups them all together. Every action constructor, whether it be for the GET conversion action or the other method actions, take in the corresponding Method Object subclass created earlier. Once an Action object is created, the process function is called and the getMessage is then sent to the response factory send function. </p>
+
+<p>Whilst the above was specifically for the GET, the process in managing a request is the same:
+<ol type="1">
+<li>The method is sent to the Request class</li>
+<li>The conv_METHODNAME.php is called</li>
+<li>The method object is created</li>
+<li>The Action is created with the method object set as a parameter</li>
+<li>The Action is processed</li>
+<li>The get message is sent to the response factory send function. </li>
+</ol>
+Before creating the rest of the methods in this action I decided to build the client because without a client it would be hard to see if the code was working during creation. I used the AngularJS framework. AngularJS handles the switching between radio buttons and forms a JSON model of all the form data. This is then sent to an AJAX request. Instead of writing out a request for each method, I made a piece of code which determines the request based on the radio button selection.  The AJAX HTTP request makes and returns the response from the API. I added a piece of code to format the JSON. This was not so easy for XML but this could be one area for improvement. </p>
+<p>One created I then began building the rest of the application. This was made very easy due to the model I had formed. </p>
+<p>For the delete method, the file required file is called <a href="./sources/server/conv_delete.phps">conv_delete.php</a>. The method object is called <a href="./sources/server/class.DeleteObject.inc.phps">Delete Object</a> which is passed through to the <a href="./sources/server/class.DeleteCurrency.inc.phps">delete currency action</a>.</p>
+<p>For the put method, the file required file is called <a href="./sources/server/conv_put.phps">conv_put.php</a>. The method object is called <a href="./sources/server/class.PutObject.inc.phps">Put Object</a> which is passed through to the <a href="./sources/server/class.AddCurrency.inc.phps">add currency action</a>.</p>
+<p>For the post method, the file required file is called <a href="./sources/server/conv_post.phps">conv_post.php</a>. The method object is called <a href="./sources/server/class.PostObject.inc.phps">Post Object</a> which is passed through to the <a href="./sources/server/class.RateUpdate.inc.phps">rate update action</a>.</p>
+<p>For all of the object there are checks within the XML file to check if codes exists. In some cases, such as for the Delete and Post methods, a <a href="./sources/server/class.Currency.inc.phps">currency object</a> is created which stores the details of the XML element. This can be passed through the code and easily maintained. </p>
+<p>The project uses a <a href="./sources/server/config.phps">configuration file</a> to store important constants and templates. The code is designed so that many changes or extensions can be made simply by using the configuration file. </p>
+<p>Once everything was in place, the API went through some test cases to ensure that everything works as expected. This is logged <a href="tests.pdf">here</a>.</p>
+<p>Overall I am very please with what I have designed and created. The code follows good coding practices and can be easily understood, extended and reused. There are very few things that I would change. One of those is the logic within objects. If I were to continue this project I would put less logic, methods and functions inside the objects because this can actually slow down the system. But, with that being said, since it’s only a small API, this is not a noticeable issue. </p>
+
+
+			</section>
+		</main>
+		<footer>
+		</footer>
+	</body>
+</html>

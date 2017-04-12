@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+		<title>SeaCurrent - Exchange Rate Converter</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/angular.min.js"></script>
+	</head>
+	<body ng-app="seacurrentApp" ng-controller="seacurrentController">
+		<header>
+			<div id="banner"></div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li> | 
+					<li><a href="./doc/">PhpDoc</a></li> | 
+					<li><a href="./data/rates.xml">XML File</a></li> | 
+					<li><a href="sources.html">Source Files</a></li> | 
+					<li><a href="evaluation.html">Critical Evaluation</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section id="form">
+				<form  ng-submit="submit()">		
+					<fieldset>
+						<label for="request">Request Method:</label>
+							<div class="radio-buttons" ng-init="request='put'">
+								<input type="radio" ng-attr-type="radio" name="request" value="put" ng-change="reset()" checked ng-model="request"> PUT
+	  							<input type="radio" ng-attr-type="radio" name="request" value="post" ng-change="reset()" ng-model="request"> POST
+	  							<input type="radio" ng-attr-type="radio" name="request" value="delete" ng-change="reset()" ng-model="request"> DELETE
+	  						</div>
+	  					<label for="format">Response Format:</label>
+							<div class="radio-buttons" ng-init="form.format='xml'">
+								<input type="radio" ng-attr-type="radio" name="format" value="xml" ng-model="form.format"> XML
+	  							<input type="radio" ng-attr-type="radio" name="format" value="json" ng-model="form.format"> JSON
+	  					</div>
+
+						<label for="code">Code:</label>
+							<input type="text" ng-attr-type="text" name="code" placeholder="Currency Code" ng-model="form.code">
+
+						<label for="name" ng-show="nameFieldVisibility()">Currency Name:</label>
+							<input type="text" ng-attr-type="text" name="name" placeholder="Currency Name" ng-model="form.name" ng-show="nameFieldVisibility()">
+
+						<label for="rate" ng-show="rateFieldVisibility()">Rate (&pound;=1)</label>
+							<input type="text" ng-attr-type="text" name="rate" placeholder="Rate" ng-model="form.rate" ng-show="rateFieldVisibility()">
+
+						<label for="locations" ng-show="locationsFieldVisibility()">Locations (commar separated)</label>
+							<input type="text" ng-attr-type="text" name="locations" placeholder="Locations" ng-model="form.locations" ng-show="locationsFieldVisibility()">
+
+						<button type="submit" ng-attr-type="submit" ng-Click="submit">SUBMIT</button>
+					</fieldset>
+				</form>
+			</section>
+			<section id="response">
+				<div class="wrapper">
+					<textarea name="message" ng-disabled="true" ng-model="response"></textarea>
+				</div>
+			</section>
+		</main>
+		<footer>
+		</footer>
+		<script src="js/app.js"></script>
+	</body>
+</html>

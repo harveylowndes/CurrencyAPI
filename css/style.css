@@ -1,0 +1,175 @@
+@import url(https://fonts.googleapis.com/css?family=Handlee);
+
+body {
+	margin: 0;
+	color: white;
+	font-family: 'Handlee', cursive;
+	font-size: 16px;
+	background: url('http://orig10.deviantart.net/67e8/f/2012/186/f/e/sea_night_background__by_inbalfeldman-d565gqo.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+}
+
+header {
+	margin: 0 auto;
+}
+
+header > div#banner {
+	background-image: url("../images/banner.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0 auto;
+	width: 400px;
+	height: 100px;
+	
+}
+
+header > nav > ul {
+	list-style-type: none;
+	padding: 0;
+	margin-top: 0px;
+	text-align: center;
+}
+
+header > nav > ul > li {
+	display: inline;
+}
+
+header > nav > ul > li > a {
+	color: white;
+	font-size: 0.8em;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+header > nav > ul > li > a:hover {
+	color: black;
+}
+
+h2 {
+	text-align: center;
+	font-size: 1em;
+}
+
+h3 > a:link {
+	color: white;
+}
+
+h3 > a:visited {
+	color: white;
+}
+
+h3 > a:hover {
+	color: black;
+}
+
+h3 > a:active {
+	color: white;
+}
+
+.highlight {
+	color: #FF5706;
+}
+
+main > section#content {
+	margin: 0 auto;
+	padding: 15px;
+	width: 650px;
+	border-color: black;
+	border-radius:10px;
+	background-color: black;
+	background: rgb(0, 0, 0); /* Fallback for older browsers without RGBA-support */
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-box-shadow: 0px 0px 50px 15px rgba(255,255,255,0.3);
+	-moz-box-shadow: 0px 0px 50px 15px rgba(255,255,255,0.3);
+	box-shadow: 0px 0px 50px 15px rgba(255,255,255,0.3);
+}
+
+main > section#form {
+	margin: 0 auto;
+	width: 300px;
+}
+
+main > section#form > form > fieldset {
+	border-color: black;
+	border-radius:10px;
+	background-color: black;
+	background: rgb(0, 0, 0); /* Fallback for older browsers without RGBA-support */
+    background: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 50px 15px rgba(255,255,255,0.3);
+	-moz-box-shadow: 0px 0px 50px 15px rgba(255,255,255,0.3);
+	box-shadow: 0px 0px 50px 15px rgba(255,255,255,0.3);
+}
+
+main > section#form > form > fieldset  > input {
+	border-radius:10px;
+	border-color: #black;
+	border-style: solid;
+	font-size: 0.8em;
+	height: 25px;
+	width: 100%;
+	margin-top: 2px;
+	margin-bottom: 10px;
+	display: block;
+	outline:0;
+}
+
+main > section#form > form > fieldset  > input:hover, main > section#form > form > fieldset  > input:focus {
+	border-color: #CE4300;
+}
+
+main > section#form > form > fieldset > button {
+	font-family: 'Handlee', cursive;
+	letter-spacing: 0.5px;
+	background-color: #FF5706;
+	color: white;
+	border-color: #CE4300;
+	border-width: 3px;
+	border-style: solid;
+	border-radius:10px;
+	height: 40px;
+	width: 100%;
+	font-size: 0.8em;
+	outline:0;
+}
+
+main > section#form > form > fieldset > button:hover {
+	background-color: white;
+	color: #FF5706;
+}
+
+.wrapper {
+	min-width: 300px;
+	width: 500px;
+} 
+
+main > section#response > div {
+	margin: 0 auto;
+}
+
+main > section#response > div > textarea {
+	padding: 10px;
+	border-radius:10px;
+	border-width: 2px;
+	border-color: #FF5706;
+	width: 100%;
+	min-height: 200px;
+	outline:0;
+	background: rgb(0, 0, 0); /* Fallback for older browsers without RGBA-support */
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    margin-top: 50px;
+    -webkit-box-shadow: inset 0px 0px 0px 7px rgba(255,87,6,0.3);
+-moz-box-shadow: inset 0px 0px 0px 7px rgba(255,87,6,0.3);
+box-shadow: inset 0px 0px 0px 7px rgba(255,87,6,0.3);
+}
+
+.radio-buttons {
+	display: block;
+	font-size: 0.8em;
+	text-align: center;
+}
